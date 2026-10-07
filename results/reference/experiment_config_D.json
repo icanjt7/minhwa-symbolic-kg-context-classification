@@ -1,0 +1,78 @@
+{
+  "analysis": "v4 A/B/C preservation plus pre-specified D graph-embedding extension",
+  "date": "2026-10-04",
+  "seed": 42,
+  "bootstrap_seed": 20261003,
+  "n_relation_rows": 34522,
+  "n_artwork_groups": 3779,
+  "n_classes": 8,
+  "classes": [
+    "기타",
+    "길상",
+    "다산",
+    "벽사",
+    "부귀",
+    "장수",
+    "출세",
+    "화합"
+  ],
+  "fold_source": "folk_kg_project/results/tables/reviewer_reanalysis_validation_20261001/grouped_ablation_predictions.csv",
+  "condition_D": "C text features plus a 64-d spectral embedding of the training-fold-only motif/subject graph",
+  "graph_nodes": "typed motif and subject nodes",
+  "graph_edges": "within-training-artwork motif co-occurrence and motif-subject edges; weighted by artwork count",
+  "embedding": {
+    "method": "TruncatedSVD of symmetrically normalized adjacency",
+    "dimensions": 64,
+    "n_iter": 7,
+    "row_feature": "L2-normalized mean of known nodes in the artwork"
+  },
+  "leakage_control": "Each embedding and TF-IDF vocabulary is fit on outer-training artwork groups only; validation groups and all labels are excluded from graph fitting.",
+  "classifier": {
+    "type": "LogisticRegression",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "threshold_sensitivity": {
+    "supported_grid": [
+      0.7,
+      0.74,
+      0.78,
+      0.82,
+      0.86
+    ],
+    "plausible_grid": [
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65
+    ],
+    "n_claims": 40306,
+    "baseline_recalculation": {
+      "counts": {
+        "supported": 34980,
+        "needs_review": 1475,
+        "plausible": 3851
+      },
+      "changed_vs_stored": 0
+    }
+  },
+  "software": {
+    "python": "3.13.12",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.9.1"
+  },
+  "hashes": {
+    "raw": "7b8648ebfecd94cb201e6354d991b80f07533ccb5a82d50b4006103753c09d9c",
+    "manifest": "ed46d2ca98e7213ca89710c4888f6d5f17da5aa8d236515a925789c91cd14178",
+    "stored_oof": "b8018eea6998b310c3c06b71bd0456bbf40a4472b93563343e69b9ef8810e018",
+    "agent_csv": "314a400bfd2f81aefee218ca935cb00fc944f64f1d575dda3dee1c070bf72059",
+    "script": "1660e978d93893c66508710e4f920e918f434dbda8ba908bd9bc58e61002f241"
+  },
+  "selection_note": "No embedding dimension, classifier, threshold, or fold was selected by OOF performance."
+}

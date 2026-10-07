@@ -1,0 +1,250 @@
+{
+  "analysis": "Other-label OOF sensitivity without new human review",
+  "date": "2026-10-05",
+  "seed": 20261005,
+  "bootstrap_iterations": 2000,
+  "inputs": [
+    {
+      "path": "minhwa_raw_combined.csv",
+      "sha256": "7b8648ebfecd94cb201e6354d991b80f07533ccb5a82d50b4006103753c09d9c",
+      "rows": 9119,
+      "columns": [
+        "file_name",
+        "subject_type",
+        "theme_type",
+        "painting_type",
+        "ground_material",
+        "purpose",
+        "objects",
+        "keywords",
+        "era"
+      ]
+    },
+    {
+      "path": "folk_kg_project/data/raw/metadata/manifest.csv",
+      "sha256": "ed46d2ca98e7213ca89710c4888f6d5f17da5aa8d236515a925789c91cd14178",
+      "rows": 9119,
+      "columns": [
+        "image_id",
+        "image_stem",
+        "file_path",
+        "rel_path"
+      ]
+    },
+    {
+      "path": "folk_kg_project/results/tables/reviewer_reanalysis_validation_20261001/grouped_ablation_predictions.csv",
+      "sha256": "b8018eea6998b310c3c06b71bd0456bbf40a4472b93563343e69b9ef8810e018",
+      "rows": 34522,
+      "columns": [
+        "fold",
+        "group_id",
+        "motif",
+        "y_true",
+        "pred_motif_only",
+        "pred_metadata_context",
+        "pred_kg_context"
+      ]
+    },
+    {
+      "path": "folk_kg_project/scripts/reviewer_grouped_ablation.py",
+      "sha256": "7d1b511aef8e9a9ab6859a6dd2050a6d7d367ea810ba17d6e6b935707ec4b64e"
+    }
+  ],
+  "integrity": {
+    "total_rows": 34522,
+    "artwork_groups": 3779,
+    "classes": [
+      "기타",
+      "길상",
+      "다산",
+      "벽사",
+      "부귀",
+      "장수",
+      "출세",
+      "화합"
+    ],
+    "class_counts": {
+      "장수": 6376,
+      "부귀": 2793,
+      "다산": 2258,
+      "출세": 1575,
+      "벽사": 249,
+      "화합": 3775,
+      "길상": 4205,
+      "기타": 13291
+    },
+    "other_rows": 13291,
+    "duplicate_relation_keys": 0,
+    "missing_artwork_id": 0,
+    "oof_rows": 34522,
+    "oof_key_match": true,
+    "oof_duplicate_keys": 0,
+    "max_folds_per_artwork": 1,
+    "prediction_missing": {
+      "A": 0,
+      "B": 0,
+      "C": 0
+    },
+    "raw_rows": 9119,
+    "manifest_rows": 9119,
+    "passed": true
+  },
+  "normalization": [
+    "Unicode NFC",
+    "trim and collapse whitespace",
+    "remove bracket characters while retaining contents",
+    "unify separators to |",
+    "compact spacing variants only for existing mapping-rule matching"
+  ],
+  "normalization_prohibition": "No new synonym or cultural-semantic mapping was added.",
+  "other_profile": {
+    "other_rows": 13291,
+    "other_artworks": 3745,
+    "other_motifs": 679,
+    "other_subject_types": 17,
+    "unique_raw_expressions": 1938,
+    "unique_normalized_expressions": 1938,
+    "singleton_expressions": 724,
+    "singleton_share_of_unique": 0.3735810113519092,
+    "le5_expressions": 1364,
+    "le5_share_of_unique": 0.7038183694530443,
+    "top20_unique_row_coverage": 0.8172447520878791,
+    "top50_unique_row_coverage": 0.9045218568956437,
+    "top100_unique_row_coverage": 0.9459784816793319,
+    "composite_rows": 1224,
+    "composite_row_share": 0.09209239334888271,
+    "technical_candidate_rows": 0,
+    "technical_candidate_share": 0.0,
+    "top_expressions": [
+      {
+        "expression": "번영",
+        "rows": 3250
+      },
+      {
+        "expression": "절개",
+        "rows": 2627
+      },
+      {
+        "expression": "풍요",
+        "rows": 2475
+      },
+      {
+        "expression": "생명력",
+        "rows": 1522
+      },
+      {
+        "expression": "평화",
+        "rows": 1027
+      },
+      {
+        "expression": "평온",
+        "rows": 839
+      },
+      {
+        "expression": "자연",
+        "rows": 763
+      },
+      {
+        "expression": "희망",
+        "rows": 759
+      },
+      {
+        "expression": "고결함",
+        "rows": 634
+      },
+      {
+        "expression": "이상향",
+        "rows": 574
+      },
+      {
+        "expression": "청렴",
+        "rows": 562
+      },
+      {
+        "expression": "효",
+        "rows": 501
+      },
+      {
+        "expression": "청정",
+        "rows": 478
+      },
+      {
+        "expression": "강인함",
+        "rows": 468
+      },
+      {
+        "expression": "인내",
+        "rows": 392
+      },
+      {
+        "expression": "은둔",
+        "rows": 374
+      },
+      {
+        "expression": "지혜",
+        "rows": 374
+      },
+      {
+        "expression": "건강",
+        "rows": 298
+      },
+      {
+        "expression": "효제",
+        "rows": 278
+      },
+      {
+        "expression": "권위",
+        "rows": 274
+      },
+      {
+        "expression": "우애",
+        "rows": 270
+      },
+      {
+        "expression": "순결",
+        "rows": 265
+      },
+      {
+        "expression": "신성함",
+        "rows": 265
+      },
+      {
+        "expression": "용맹",
+        "rows": 265
+      },
+      {
+        "expression": "고귀함",
+        "rows": 264
+      },
+      {
+        "expression": "가족",
+        "rows": 254
+      },
+      {
+        "expression": "사랑",
+        "rows": 244
+      },
+      {
+        "expression": "변화",
+        "rows": 235
+      },
+      {
+        "expression": "번성",
+        "rows": 233
+      },
+      {
+        "expression": "지식",
+        "rows": 224
+      }
+    ]
+  },
+  "software": {
+    "python": "3.13.12",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.9.1"
+  },
+  "old_experiment_config_sha256": "791aca1291d4b91bbe6ddf16e33f05bd17d28b8a54076b4b7cff3e7e9fb32d17",
+  "script_sha256": "8d32d19655356ea1196bfc0910715b7fef343075b1dc2efd78fe4dbe539cc1c6"
+}

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="420" viewBox="0 0 880 420">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#222}.axis{stroke:#777;stroke-width:1}.grid{stroke:#ddd;stroke-width:1}</style>
+<text x="24" y="28" font-size="20" font-weight="700">Pooled out-of-fold performance</text>
+<line class="grid" x1="190" y1="350.0" x2="840" y2="350.0"/>
+<text x="145" y="355.0" font-size="13">0.0</text>
+<line class="grid" x1="190" y1="248.3" x2="840" y2="248.3"/>
+<text x="145" y="253.3" font-size="13">0.1</text>
+<line class="grid" x1="190" y1="146.7" x2="840" y2="146.7"/>
+<text x="145" y="151.7" font-size="13">0.2</text>
+<line class="grid" x1="190" y1="45.0" x2="840" y2="45.0"/>
+<text x="145" y="50.0" font-size="13">0.3</text>
+<rect x="235" y="118.4" width="34" height="231.6" fill="#8da0cb" opacity="1.0" rx="2"/>
+<text x="252" y="111.4" font-size="11" text-anchor="middle">0.2278</text>
+<rect x="277" y="92.5" width="34" height="257.5" fill="#8da0cb" opacity="0.55" rx="2"/>
+<text x="294" y="85.5" font-size="11" text-anchor="middle">0.2533</text>
+<text x="273" y="378" font-size="13" text-anchor="middle">A  motif</text>
+<rect x="390" y="77.6" width="34" height="272.4" fill="#66c2a5" opacity="1.0" rx="2"/>
+<text x="407" y="70.6" font-size="11" text-anchor="middle">0.2680</text>
+<rect x="432" y="69.5" width="34" height="280.5" fill="#66c2a5" opacity="0.55" rx="2"/>
+<text x="449" y="62.5" font-size="11" text-anchor="middle">0.2759</text>
+<text x="428" y="378" font-size="13" text-anchor="middle">B  +metadata</text>
+<rect x="545" y="75.4" width="34" height="274.6" fill="#fc8d62" opacity="1.0" rx="2"/>
+<text x="562" y="68.4" font-size="11" text-anchor="middle">0.2701</text>
+<rect x="587" y="67.8" width="34" height="282.2" fill="#fc8d62" opacity="0.55" rx="2"/>
+<text x="604" y="60.8" font-size="11" text-anchor="middle">0.2775</text>
+<text x="583" y="378" font-size="13" text-anchor="middle">C  +KG</text>
+<rect x="700" y="75.0" width="34" height="275.0" fill="#e78ac3" opacity="1.0" rx="2"/>
+<text x="717" y="68.0" font-size="11" text-anchor="middle">0.2705</text>
+<rect x="742" y="67.3" width="34" height="282.7" fill="#e78ac3" opacity="0.55" rx="2"/>
+<text x="759" y="60.3" font-size="11" text-anchor="middle">0.2781</text>
+<text x="738" y="378" font-size="13" text-anchor="middle">D  +embedding</text>
+<rect x="650" y="17" width="12" height="12" fill="#555"/><text x="670" y="28" font-size="12">macro-F1</text>
+<rect x="747" y="17" width="12" height="12" fill="#555" opacity=".55"/><text x="767" y="28" font-size="12">micro-F1</text>
+<line class="axis" x1="190" y1="350" x2="840" y2="350"/>
+</svg>

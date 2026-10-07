@@ -1,0 +1,10 @@
+name: minhwa-repro
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9.6
+  - numpy=1.26.4
+  - pandas=2.3.3
+  - scipy=1.13.1
+  - scikit-learn=1.6.1
+  - pyyaml=6.0.2

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this reproducibility package, please cite the software and the associated article."
+type: software
+title: "Minhwa Symbolic KG Context Classification"
+authors:
+  - family-names: "Shim"
+    given-names: "Jungtaek"
+version: 0.1.0
+date-released: 2026-10-07
+url: "https://github.com/icanjt7/minhwa-symbolic-kg-context-classification"
+repository-code: "https://github.com/icanjt7/minhwa-symbolic-kg-context-classification"
+license: MIT
+keywords:
+  - Minhwa
+  - knowledge graph
+  - symbolic meaning
+  - grouped cross-validation
+  - reproducibility

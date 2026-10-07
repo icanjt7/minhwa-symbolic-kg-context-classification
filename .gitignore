@@ -1,0 +1,23 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.idea/
+.vscode/
+.pytest_cache/
+
+# AI Hub source data and local derivatives must never be committed.
+data/private/*
+!data/private/.gitkeep
+results/generated/
+
+# Common accidental source-data extensions.
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.tiff
+*.webp
+*.parquet
+minhwa_raw_combined.csv
+manifest.csv

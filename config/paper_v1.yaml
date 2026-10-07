@@ -1,0 +1,42 @@
+dataset:
+  name: "AI Hub 한국 전통 민화 제작 데이터"
+  id: 71920
+  version: "1.1"
+  normalized_rows: 9119
+
+experiment:
+  seed: 42
+  bootstrap_seed: 20261003
+  other_sensitivity_seed: 20261005
+  n_splits: 5
+  n_relation_rows: 34522
+  n_artwork_groups: 3779
+  labels: ["기타", "길상", "다산", "벽사", "부귀", "장수", "출세", "화합"]
+
+text_model:
+  vectorizer: tfidf
+  ngram_range: [1, 2]
+  min_df: 2
+  max_df: 0.95
+  sublinear_tf: true
+  classifier: logistic_regression
+  C: 1.0
+  solver: lbfgs
+  max_iter: 2000
+  class_weight: balanced
+
+graph_embedding:
+  method: truncated_svd_normalized_adjacency
+  dimensions: 64
+  n_iter: 7
+
+bootstrap:
+  unit: artwork_group
+  iterations: 2000
+  confidence_interval: 0.95
+
+determinism:
+  pythonhashseed: 0
+  omp_num_threads: 1
+  mkl_num_threads: 1
+  openblas_num_threads: 1
