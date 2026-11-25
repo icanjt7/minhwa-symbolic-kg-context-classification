@@ -13,6 +13,17 @@
 
 세부 기준은 [DATA_USE_NOTICE.md](DATA_USE_NOTICE.md)와 [REPRODUCIBILITY.md](REPRODUCIBILITY.md)를 보세요.
 
+논문에 명시한 공개 항목은 다음 경로에서 확인할 수 있습니다.
+
+| 공개 항목 | 저장소 경로 |
+|---|---|
+| 분석 코드 | `src/` |
+| 고정 설정 | `config/paper_v1.yaml` |
+| 가명화된 작품별 fold 배정 | `metadata/fold_assignment_hashed.csv` |
+| 최소 비식별 OOF 예측 | `results/oof_predictions_minimal.csv` |
+| 집계 지표·부트스트랩·민감도 결과 | `results/reference/` |
+| 기존 관계 행 생성·필터·레이블 스킴 검증 | `results/reference/legacy_*.csv` |
+
 ## 실험 설계
 
 | 조건 | 입력 | pooled OOF macro-F1 | micro-F1 |
@@ -48,7 +59,7 @@ PASS: public result-file SHA-256 hashes match
 config/                 논문 버전의 고정 설정
 data/private/           이용자가 로컬에만 두는 입력(.gitignore)
 metadata/               스키마, 레이블 규칙, fold, 해시, 계보
-results/reference/      논문에서 보고한 공개 가능 집계값
+results/reference/      논문에서 보고한 공개 가능 집계값·민감도·기존 스킴 검증
 results/generated/      재실행 산출물(.gitignore)
 src/                    입력 검증, A–D, 민감도, 에이전트, 패키지 검증
 tests/                  공개 패키지 스모크 테스트
